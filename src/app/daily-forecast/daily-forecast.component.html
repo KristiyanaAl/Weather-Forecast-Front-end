@@ -1,0 +1,8 @@
+<body style="background-color:powderblue;">
+  <h1>Daily forecast for {{ forecastLocation.name }}, {{ forecastLocation.state }}</h1>
+  <h2>Min: {{ temperatureState.minTemp }} {{ temperatureState.unit}} - Max: {{ temperatureState.maxTemp }} {{ temperatureState.unit}} </h2>
+  <h3>Speed: {{ windState.speed }} {{ windState.unit }}, direction: {{ windState.direction }}</h3>
+  <h4> Cloudiness: {{ cloudiness.description }}</h4>
+
+  <h3><a routerLink="/fiveDayForecast/{{ forecastLocation.id }}">Five day forecast for {{forecastLocation.name}}, {{forecastLocation.state}}</a></h3>
+  <h3><a routerLink="/tenDayForecast/{{ forecastLocation.id }}">Ten day forecast for {{forecastLocation.name}}, {{forecastLocation.state}}</a></h3>

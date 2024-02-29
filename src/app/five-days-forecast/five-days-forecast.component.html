@@ -1,0 +1,15 @@
+<body style="background-color:powderblue;">
+  <h1>Five day forecast for {{ forecastLocation.name}}, {{forecastLocation.state}}</h1>
+  <nav>
+    <ul>
+      <li *ngFor="let forecastUnit of forecastUnits">
+        <h2>
+          Min: {{ forecastUnit.temperatureState.minTemp }} {{ forecastUnit.temperatureState.unit}}
+          - Max: {{ forecastUnit.temperatureState.maxTemp }} {{ forecastUnit.temperatureState.unit}}
+        </h2>
+        <h3>Speed: {{ forecastUnit.windState.speed }} {{ forecastUnit.windState.unit }}, direction: {{ forecastUnit.windState.direction }}</h3>
+        <h4> Cloudiness: {{ forecastUnit.cloudiness.description }}</h4>
+      </li>
+    </ul>
+  </nav>
+

@@ -1,0 +1,11 @@
+<body style="background-color:powderblue;">
+  <div class ="container">
+    <!--<img src="../assets/background.jpg" alt="">-->
+  </div>
+  <h1>{{ title }}</h1>
+  <nav>
+    <ul>
+      <li *ngFor="let forecastLocation of forecastLocations"><a routerLink="dailyForecast/{{ forecastLocation.id }}">{{forecastLocation.name}}, {{forecastLocation.state}}</a></li>
+    </ul>
+  </nav>
+
